@@ -3,7 +3,6 @@ pipeline{
     tools {
         nodejs 'node'
         gradle 'gradle'
-        jdk 'jdk'
     }
     options{
         timeout(time:10, unit:'MINUTES')
