@@ -9,7 +9,7 @@ pipeline{
     stages{
         stage('Instalación de dependencias'){
             steps{
-                sh 'npm install -g nativescript'
+                sh 'npm install'
             }
         }
         stage('Validar Kiuwan'){
