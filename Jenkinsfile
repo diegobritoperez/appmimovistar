@@ -4,12 +4,12 @@ pipeline{
         nodejs 'node'
     }
     options{
-        timeout(time:2, unit:'MINUTES')
+        timeout(time:10, unit:'MINUTES')
     }
     stages{
         stage('Instalación de dependencias'){
             steps{
-                sh 'npm install'
+                sh 'npm install -g nativescript'
             }
         }
         stage('Validar Kiuwan'){
