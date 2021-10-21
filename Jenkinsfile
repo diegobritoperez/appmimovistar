@@ -12,19 +12,19 @@ pipeline{
                 sh 'npm install'
             }
         }
-        stage('Validar Kiuwan'){
+        stage('ns doctor'){
             steps{
-                sh 'echo "validar kiuwan (en construcción)"'
+                sh 'ns doctor android'
+            }
+        }
+        stage('Generación APK'){
+            steps{
+                sh 'ns build android'
             }
         }
         stage('Pruebas unitarias'){
             steps{
                 sh 'echo "Pruebas unitarias (en construcción)"'
-            }
-        }
-        stage('Generación APK'){
-            steps{
-                sh 'echo "Diego Brito"'
             }
         }
         stage('Pruebas funcionales'){
