@@ -13,14 +13,14 @@ pipeline{
                 sh 'npm install'
             }
         }
+        stage('tns doctor'){
+            steps{
+                sh 'ns doctor android'
+            }
+        }
         stage('ns platform add'){
             steps{
                 sh 'ns platform add android'
-            }
-        }
-        stage('ns doctor'){
-            steps{
-                sh 'ns doctor android'
             }
         }
         stage('Generación APK'){
